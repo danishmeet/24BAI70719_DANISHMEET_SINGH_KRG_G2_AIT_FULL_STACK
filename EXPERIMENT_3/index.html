@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="form-section">
+            <h2>Job Search Profile Form</h2>
+            <form id="jobForm">
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="123-456-7890">
+                </div>
+
+                <div class="input-group">
+                    <label for="jobTitle">Desired Job Title</label>
+                    <input type="text" id="jobTitle" name="jobTitle" required placeholder="e.g. Software Engineer">
+                </div>
+
+                <div class="input-group">
+                    <label for="experience">Experience Level</label>
+                    <select id="experience" name="experience" required>
+                        <option value="" disabled selected>Select experience</option>
+                        <option value="Entry Level (0-2 years)">Entry Level (0-2 years)</option>
+                        <option value="Mid Level (3-5 years)">Mid Level (3-5 years)</option>
+                        <option value="Senior Level (5+ years)">Senior Level (5+ years)</option>
+                        <option value="Executive">Executive</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="skills">Key Skills (comma separated)</label>
+                    <textarea id="skills" name="skills" rows="3" required
+                        placeholder="HTML, CSS, JavaScript, React..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Create Profile</button>
+            </form>
+        </div>
+
+       
+        <div class="profile-section" id="profileSection" style="display: none;">
+            <h2>User Profile</h2>
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="avatar" id="displayAvatar"></div>
+                    <div>
+                        <h3 id="displayFullName">Name</h3>
+                        <p id="displayJobTitle" class="job-title">Job Title</p>
+                    </div>
+                </div>
+
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <strong>Email:</strong> <span id="displayEmail">email@example.com</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Phone:</strong> <span id="displayPhone">000-000-0000</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Experience:</strong> <span id="displayExperience">Level</span>
+                    </div>
+                    <div class="detail-item skills-container">
+                        <strong>Skills:</strong>
+                        <div id="displaySkills" class="skills-list">
+                            <!-- Skill tags will go here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

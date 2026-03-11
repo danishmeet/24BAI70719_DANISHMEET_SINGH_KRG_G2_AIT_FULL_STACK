@@ -1,0 +1,13 @@
+<p id="para">Click the button to change this text</p>
+
+<button onclick="changeText()">Click</button>
+
+<script>
+    function changeText() {
+        let p = document.getElementById("para");
+
+        p.textContent = "Welcome to JavaScript DOM Manipulation";
+        p.style.color = "blue";
+        p.style.fontSize = "24px";
+    }
+</script>
